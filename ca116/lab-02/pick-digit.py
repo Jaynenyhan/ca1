@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-#n = input()
-n = 9876
-p = 0
+n = input()
+p = input()
 
-print 
+print n % 10 ** (p + 1) / 10 ** p

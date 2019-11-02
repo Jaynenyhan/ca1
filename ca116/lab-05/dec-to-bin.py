@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-bin = ""
+binary = ""
 n = input()
 
 while n != 0:
-   bin = str(n % 2) + bin
+   binary = str(n % 2) + binary
    n = n / 2
 
-print bin
+print binary
