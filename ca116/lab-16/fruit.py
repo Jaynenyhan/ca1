@@ -2,7 +2,6 @@
 
 import sys
 
-words = sys.stdin.readlines()
 fruit = {
    "apple": True,
    "pear": True,
@@ -11,6 +10,7 @@ fruit = {
    "cherry": True,
 }
 
+words = sys.stdin.readlines()
 i = 0
 while i < len(words):
    word = words[i].rstrip()
