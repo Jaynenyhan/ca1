@@ -15,4 +15,15 @@ while i < len(src):
    translation[src[i]] = dst[i]
    i += 1
 
-print translation
+lines = sys.stdin.readlines()
+print lines
+t = ""
+i = 0
+while i < len(lines):
+   if lines[i] in src:
+      t = t + translation[lines[i]]
+   else:
+      t = t + lines[i]
+   i += 1
+
+print t
