@@ -12,16 +12,16 @@ while s != "end":
    ns.append(s)
    s = raw_input()
 
-t = a[int(ns[0])]
+# Ok so no output if no numbers, so build string if numbers exist
+if ns[0]:
+   t = a[int(ns[0])] + " "
 i = 1
 while i < len(ns):
    curr = ns[i]
-   if curr == "":
-      print t
-      t = a[int(ns[i + 1])]
-      i += 1
+   if ns[i] == "":
+      t = t + "\n"
    else:
-      t = t + " " + a[int(curr)]
+      t = t + a[int(curr)] + " "
    i += 1
 
 print t

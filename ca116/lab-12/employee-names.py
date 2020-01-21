@@ -14,4 +14,12 @@ while s != "end":
    s = raw_input()
 
 # For each employee number, check each item in list for the number
-# If it exists, print that employees name then proceed to next number and repeat
+# If it exists, print that employees name and repeat
+i = 0
+while i < len(numbers):
+   j = 0
+   while j < len(employees):
+      if numbers[i] == employees[j][:8]:
+         print employees[j][9:]
+      j += 1
+   i += 1
