@@ -1,6 +1,6 @@
 # ca1
 
-All my files from all my different modules can be found in this repo
+All my college files can be found in this repo
 
 ## Links
  - [ca116](http://ca116.computing.dcu.ie/)
