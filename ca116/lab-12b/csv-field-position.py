@@ -6,12 +6,12 @@ import sys
 arg = sys.argv[1]
 s = raw_input()
 
-print arg
-
+# Count commas while passing
+count = 0
 i = 0
-while i < len(s) and s[i:len(arg)] != arg:
-   print i
-   print s[i:len(arg)]
-   i = i + 1
+while i < len(s) and s[i:i + len(arg)] != arg:
+   if s[i] == ",":
+      count += 1
+   i += 1
 
-print s[i:len(arg)]
+print count
