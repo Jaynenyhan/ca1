@@ -10,4 +10,7 @@ ssh-add ~/.ssh/id_rsa
 git pull
 
 echo
+echo ~~~~~~~
 echo "Done!"
+echo ~~~~~~~
+echo
