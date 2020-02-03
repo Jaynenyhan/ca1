@@ -9,14 +9,14 @@ def main():
    end_r = float(sys.argv[3])
 
    h1 = 'Radius (m)'
-   h4 = '-' * len(h1)
+   h1_len = '-' * len(h1)
    h2 = 'Area (m^2)'
-   h5 = '-' * len(h2)
+   h2_len = '-' * len(h2)
    h3 = 'Volume (m^3)'
-   h6 = '-' * len(h3)
+   h3_len = '-' * len(h3)
 
    print('{:>s} {:>15s} {:>15s}'.format(h1, h2, h3))
-   print('{:>s} {:>15s} {:>15s}'.format(h4, h5, h6))
+   print('{:>s} {:>15s} {:>15s}'.format(h1_len, h2_len, h3_len))
 
    while start_r <= end_r:
       area = 4 * math.pi * start_r ** 2
