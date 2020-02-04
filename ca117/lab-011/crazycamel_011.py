@@ -2,17 +2,16 @@
 
 import sys
 
-def camel(line):
+def camel(s):
    new_words = []
-   for word in line.split():
+   for word in s.split():
       new_words.append(word[:-1] + word[-1].upper())
    new_string = " ".join(new_words)
-   return new_string
+   print(new_string)
 
 def main():
    for line in sys.stdin:
-      output = camel(line)
-      print(output)
+      camel(line)
 
 if __name__ == '__main__':
    main()
