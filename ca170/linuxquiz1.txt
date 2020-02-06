@@ -1,0 +1,72 @@
+ Typing "pwd" causes what to happen? 
+print working directory
+
+ Typing "cd" causes what to happen? 
+change directory
+
+ The "cd" command (then hit return) followed by the "pwd" command does what? 
+change directory, then print working directory
+
+ Typing "cd" (then hit return) followed by "cd .." causes what to happen? 
+change directory, then change back to parent directory
+
+ The commands "cd" followed by "mkdir stuff" are run, what happens? 
+change directory, then creates directory called "stuff"
+
+ The commands "cd" followed by "mkdir ../stuff" are run, what happens? 
+change directory, make directory in the parent directory called "stuff"
+
+ In the previous: Why did that happen? 
+beacuse ".." refers to the parent directory
+
+ I am in my home directory and I type: cd bin - What directory am I in now? 
+/users/ca1/joycec27/bin
+
+ I am in my home directory and I type: cd /bin - What directory am I in now? 
+/bin
+
+ I am in my home directory and I type: cd ../bin - What directory am I in now? 
+/users/ca1/bin
+
+ The directory / is what? 
+root
+
+ Typing "cd /" causes what to happen? 
+change to root directory
+
+ Typing "cd /" followed by "cd .." causes what to happen? 
+change to root directory, "cd .." does nothing as we are already at root
+
+ The commands "cd /" followed by "mkdir stuff" are run, what happens? 
+change to root directory, then creates directory called "stuff"
+
+ Typing "cd \" causes what to happen? 
+nothing
+
+ On Windows command line, by typing in cd \ what happens? 
+change to root directory
+
+ On Windows command line, by typing in cd / what happens? 
+change to root directory
+
+ The directory /bin is what? 
+location where programs can be found
+
+ How would you list the files in /bin 
+cd /bin; ls
+
+ EXTRA QUESTION (only for experienced Linux people): Write a one-line command line to count the number of files in /bin 
+ls -1 | wc -l
+
+ The command ls -l does what? 
+lists files, but with more file information
+
+ The command ls -a does what? 
+lists files and also show hidden files
+
+ The command ls -al does what? 
+lists files and also show hidden files, but with more file information
+
+ The command ls -R does what? 
+lists files recursively
+
