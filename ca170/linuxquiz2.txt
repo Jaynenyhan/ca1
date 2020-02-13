@@ -1,0 +1,45 @@
+ What is the environment variable $PATH? 
+list of dirs where executables are located, and can be run from any location in terminal
+
+ Show me the value of $PATH 
+/usr/local/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/sbin:/users/ca1/joycec27/bin:/users/ca1/joycec27/bin
+
+ Find what directory "ls" is in. 
+/usr/bin
+
+ Show the file size of the "ls" program. 
+134872
+
+ Two programs, in different directories, have the same name. One is a system program. The other is a script that you wrote. What happens when you type that name? 
+whichever program's directory comes first in the PATH variable, in this case the system program will run first
+
+ In the previous, if you find the system program is running when you type that name, how can you make sure that your program runs instead? 
+type your programs full path
+
+ EXTRA QUESTION (only for experienced Linux people): Get the value of $PATH and translate all the ":" characters to newline characters. 
+
+
+ Issuing the command gedit will do what? 
+open text editor
+
+ Issuing the command gedit & will do what? 
+open text editor and give you back control of the terminal
+
+ What is the effect of the following Linux command? ls -al > myfile 
+output detailed list of all files to a file called "myfile"
+
+ What will this do? cd ls -alR 
+go to home dir, lists all files, including files in subfolders (recursive)
+
+ What will this do? cd / ls -alR 
+go to root dir, lists all files, including files in subfolders (recursive)
+
+ What will this do? cd / ls -al > outputfile.log 
+go to root dir, output detailed list of all files to file called "outputfile.log"
+
+ What will this do? cd / ls -al > $HOME/outputfile.log 
+go to root dir, output detailed list of all files to file called "outputfile.log" inside home dir
+
+ Typing the command man man > man does what? 
+outputs the manual for man to a file called "man"
+
