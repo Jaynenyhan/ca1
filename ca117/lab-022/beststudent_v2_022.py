@@ -8,14 +8,15 @@ def beststudent(filename):
         with open(filename) as f:
             for data in f:
                 data = data.split()
-                try:
-                    if int(data[0]) > total:
-                        total = int(data[0])
-                        name = " ".join((data[1:]))
+                if int(data[0]) > total:
+                    total = int(data[0])
+                    name = " ".join((data[1:]))
         print('Best student:', name)
         print('Best mark:', total)
     except FileNotFoundError:
         print('The file {} could not be opened.'.format(filename))
+    except ValueError:
+        print('Invalid mark {} encountered. Exiting.'.format(data[0]))
 
 def main():
     filename = sys.argv[1]
