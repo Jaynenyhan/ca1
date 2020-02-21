@@ -1,24 +1,32 @@
 #!/usr/bin/env python3
 
 import sys
-import math
 
 def square(points):
-    p1 = points[0]
-    p2 = points[1]
-    p3 = points[2]
-    distance1 = math.sqrt(((p1[0] - p2[0]) ** 2) + ((p1[1] - p2[1]) ** 2))
-    distance2 = math.sqrt(((p1[0] - p3[0]) ** 2) + ((p1[1] - p3[1]) ** 2))
-    if distance1 > distance2:
-        diagonal1 = p1
-        diagonal2 = p2
-        other = p3
+    a = points[0]
+    b = points[1]
+    c = points[2]
+    distance_ab = ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
+    distance_ac = ((a[0] - c[0]) ** 2 + (a[1] - c[1]) ** 2) ** 0.5
+    if distance_ab > distance_ac:
+        point = c
+    elif distance_ac > distance_ab:
+        point = b
     else:
-        diagonal1 = p1
-        diagonal2 = p3
-        other = p2
-    print(diagonal1)
-    print(diagonal2)
+        point = a
+    a_dist_from_point = [a[0] - point[0], a[1] - point[1]]
+    b_dist_from_point = [b[0] - point[0], b[1] - point[1]]
+    c_dist_from_point = [c[0] - point[0], c[1] - point[1]]
+    if a_dist_from_point != [0, 0] and c_dist_from_point != [0, 0]:
+        x = a_dist_from_point[0] + c[0]
+        y = a_dist_from_point[1] + c[1]
+    elif a_dist_from_point != [0, 0] and b_dist_from_point != [0, 0]:
+        x = a_dist_from_point[0] + b[0]
+        y = a_dist_from_point[1] + b[1]
+    elif b_dist_from_point != [0, 0] and c_dist_from_point != [0, 0]:
+        x = b_dist_from_point[0] + c[0]
+        y = b_dist_from_point[1] + c[1]
+    print(x, y)
 
 def main():
     points = []

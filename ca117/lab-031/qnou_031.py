@@ -2,19 +2,9 @@
 
 import sys
 
-def compare(s):
-   s = s.lower()
-   for i in range(len(s)):
-      if s[i] == 'q':
-         if i == len(s):
-            return True
-         elif s[i + 1] != 'u':
-            return True
-   return False
-
 def qnou(a):
-   a = [s.strip() for s in a]
-   print('Words with q but no u: {}'.format([s for s in a if compare(s)]))
+    words = [s.strip() for s in a]
+    print("Words with q but no u:", [s for s in words if s.lower().count("qu") < s.lower().count("q")])
 
 def main():
    qnou(sys.stdin.readlines())
