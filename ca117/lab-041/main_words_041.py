@@ -17,7 +17,7 @@ def main():
     d = {k: v for (k, v) in count.items() if len(k) > 3 and v > 2}
     # get len of longest str and int
     k_len = len(max(d, key=len))
-    v_len = len(str(d[max(d, key=d.get)]))
+    v_len = len(str(max(d.values())))
     # printing
     for k in sorted(d):
         print('{:>{:d}s} : {:{:d}d}'.format(k, k_len, d[k], v_len))

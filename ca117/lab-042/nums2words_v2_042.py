@@ -22,7 +22,11 @@ def nums2words(s):
     # i = index of list, n = element in list
     for i, n in enumerate(ns):
         # replace list element with dict equivalent
-        ns[i] = d[int(n)]
+        # if list element not in dict, unknown
+        try:
+            ns[i] = d[int(n)]
+        except (ValueError, KeyError):
+            ns[i] = 'unknown'
     # join with spaces and return
     return " ".join(ns)
 

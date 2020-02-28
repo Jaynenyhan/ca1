@@ -3,6 +3,7 @@
 import sys
 
 def main():
+    # init count
     d = {
         'a': 0,
         'e': 0,
@@ -10,11 +11,14 @@ def main():
         'o': 0,
         'u': 0
     }
+    # start counting
     for ch in sys.stdin.read():
         s = ch.lower()
         if s in 'aeiou':
             d[s] += 1
-    v_len = len(str(d[max(d, key=d.get)]))
+    # get len of longest int
+    v_len = len(str(max(d.values())))
+    # sorted by value, descending order
     for k in sorted(d, key=d.get, reverse=True):
         print('{} : {:>{:d}d}'.format(k, d[k], v_len))
 
