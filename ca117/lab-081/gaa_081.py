@@ -2,29 +2,31 @@
 
 class Score(object):
 
-    def __init__(self, goals=0, points=0):
-        self.goals = goals
-        self.points = points
-        self.total = goals * 3 + points
+    def __init__(self, g=0, p=0):
+        self.goals = g
+        self.points = p
 
     def __str__(self):
-        return '{} goal(s) and {} point(s)'.format(
+        return '{:d} goal(s) and {:d} point(s)'.format(
             self.goals, self.points)
 
+    def score2points(self):
+        return self.goals * 3 + self.points
+
     def __eq__(self, other):
-        return self.total == other.total
+        return self.score2points() == other.score2points()
 
     def __gt__(self, other):
-        return self.total > other.total
+        return self.score2points() > other.score2points()
 
     def __lt__(self, other):
-        return self.total < other.total
+        return self.score2points() < other.score2points()
 
     def __ge__(self, other):
-        return self.total >= other.total
+        return self.score2points() >= other.score2points()
 
     def __le__(self, other):
-        return self.total <= other.total
+        return self.score2points() <= other.score2points()
 
     def __add__(self, other):
         return Score(self.goals + other.goals, self.points + other.points)
@@ -35,13 +37,11 @@ class Score(object):
     def __iadd__(self, other):
         self.goals += other.goals
         self.points += other.points
-        self.total += other.total
         return self
 
     def __isub__(self, other):
         self.goals -= other.goals
         self.points -= other.points
-        self.total -= other.total
         return self
 
 def main():
