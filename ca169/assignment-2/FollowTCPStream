@@ -1,0 +1,26 @@
+GET / HTTP/1.1
+Host: sothatwemaybefree.com
+Connection: keep-alive
+DNT: 1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+
+HTTP/1.1 302 Found
+Date: Mon, 13 Apr 2020 18:47:36 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 214
+Server: Apache
+Location: https://sothatwemaybefree.com/
+Set-Cookie: SERVERID104280=112016|XpSzy|XpSzy; path=/
+X-IPLB-Instance: 29575
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>302 Found</title>
+</head><body>
+<h1>Found</h1>
+<p>The document has moved <a href="https://sothatwemaybefree.com/">here</a>.</p>
+</body></html>
